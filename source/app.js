@@ -2,6 +2,7 @@ const express=require('express')
 const app=express()
 const path=require('path')
 const hbs=require('hbs')
+const port=process.env.PORT || 3000
 const forecast=require('./utils/weathercode')
 const geocode=require('./utils/geocode')
 
@@ -45,6 +46,6 @@ app.get('/search',(req,res)=>{
 })
 })
 
-app.listen(3000,()=>{
-    console.log('port 3000 running')
+app.listen(port,()=>{
+    console.log('port running :'+port)
 })
